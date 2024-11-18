@@ -10,14 +10,16 @@
 
 <body>
     <div class="registration">
-        <a class="SwitchUserStatus">Войти в существующий аккаунт</a>
         <form class="form" action="pages/register.php" method="post">
             <input type="text" class="input firstname" placeholder="Логин" name="login">
-            <input type="email" class="input email" placeholder="Email" name="email">
-            <input type="password" class="input password" placeholder="Пароль" minlength="8" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" name="password">
-            <input type="password" class="input password" placeholder="Повторите пароль" minlength="8" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" name="passwordRepeat">
+            <input type="password" class="input password" placeholder="Пароль" name="password">
+            <!-- minlength="8" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" -->
+            <input type="password" class="input password" placeholder="Повторите пароль" name="passwordRepeat">
             <button type="submit" class="submit">Зарегистрироваться</button>
         </form>
+        <button class="SwitchUserStatus">
+            <span>У вас уже есть аккаунт?</span>
+        </button>
     </div>
 
     <script src="js/index.js"></script>

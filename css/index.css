@@ -1,3 +1,5 @@
+
+
 body {
     display: flex;
     height: 100vh;
@@ -12,6 +14,7 @@ body {
 }
 
 @import url(reset.css);
+@import url(table.css);
 
 :root {
     --success: #00C566;
@@ -35,6 +38,13 @@ body {
             color: rgba(255, 255, 255, .8);
             transition: .5s all ease-in-out;
         }
+    }
+    .SwitchUserStatus {
+        background: var(--success);
+        color: white;
+        font-weight: 700;
+        padding: 8px 0px;
+        font-size: 1rem;
     }
 }
 

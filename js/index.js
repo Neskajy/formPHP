@@ -10,19 +10,19 @@ SwitchUserStatus.addEventListener('click', () => {
         
         form.innerHTML = 
         `<input type="text" class="input firstname" placeholder="Логин" name="login">
-        <input type="password" class="input password" placeholder="Пароль" minlength="8" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" name="password">
+        <input type="password" class="input password" placeholder="Пароль" name="password">
         <button type="submit" class="submit">Войти</button>`;
         
         userStatus = "login";
     } else if (userStatus === "login") {
-        SwitchUserStatus.textContent = "Войти в существующий аккаунт";
+        SwitchUserStatus.textContent = "У вас уже есть аккаунт?";
         form.action = "pages/register.php";
         
         form.innerHTML = 
         `<input type="text" class="input firstname" placeholder="Логин" name="login">
         <input type="email" class="input email" placeholder="Email" name="email">
-        <input type="password" class="input password" placeholder="Пароль" minlength="8" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" name="password">
-        <input type="password" class="input password" placeholder="Повторите пароль" minlength="8" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" name="passwordRepeat">
+        <input type="password" class="input password" placeholder="Пароль" name="password">
+        <input type="password" class="input password" placeholder="Повторите пароль" name="passwordRepeat">
         <button type="submit" class="submit">Зарегестрироваться</button>`;
         
         userStatus = "register";

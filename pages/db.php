@@ -1,16 +1,27 @@
 <?php
-$servername = "MySQL-8.2";
+require_once("login.php");
+$serverName = "MySQL-8.2";
 $username = "root";
 $password = "";
 $dbname = "users";
 
-$conn = mysqli_connect($servername, $username, $password, $dbname);
+$connection = mysqli_connect($serverName, $username, $password, $dbname);
 
 function getConnectionStatus() {
-    global $conn;
-    if (!$conn) {
+    global $connection;
+    if (!$connection) {
         die("Connection failed" . mysqli_connect_error());
     } else {
         echo "Успех";
     }
+}
+
+// getConnectionStatus();
+
+function getTableObject($connection, $query) {
+
+    $strings = mysqli_query($connection, $query);
+    $strings = mysqli_fetch_all($strings);
+
+    return $strings;
 }

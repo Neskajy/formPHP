@@ -1,0 +1,15 @@
+table {
+    color: white;
+}
+
+th, td {
+    padding: 10px;
+}
+
+th {
+    background: rgba(0, 0, 0, .8);
+}
+
+td {
+    background: rgb(82, 82, 82);
+}
